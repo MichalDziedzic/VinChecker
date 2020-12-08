@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import Nav from './Components/Nav';
+import Search from './Components/Search';
+
 
 function App() {
   return (
-    <div className="App">
+    <div className="container-fluid">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Nav/>
       </header>
+      <section>
+       <Search></Search>
+      </section>
+      <footer>
+        <p>Copyright © 2020 Design by Misza</p>
+      </footer>
     </div>
   );
 }
