@@ -1,23 +1,23 @@
-import './App.css';
+import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
+
 import Nav from './Components/Nav';
 import Search from './Components/Search';
-
-
+import Footer from './Components/Footer';
+import {Container} from 'react-bootstrap';
+import './App.css';
 function App() {
   return (
-    <div className="container-fluid">
-      <header className="App-header">
+    <Container fluid> 
+        
         <Nav/>
-      </header>
-      <section>
+
        <Search></Search>
-      </section>
-      <footer>
-        <p>Copyright © 2020 Design by Misza</p>
-      </footer>
-    </div>
+     
+      <Footer/>
+
+   </Container>
   );
 }
 

@@ -1,0 +1,11 @@
+.row
+{
+    margin: 0 auto;
+}
+.row_Search
+{
+    min-height: 80vh;
+    width: 100%;
+    background-size: cover;
+    
+}
