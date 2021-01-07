@@ -1,23 +1,20 @@
 import React from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Nav from './Components/Nav';
-import Search from './Components/Search';
-import Footer from './Components/Footer';
-import {Container} from 'react-bootstrap';
+import Main from './Components/Main/Main';
+import Info from './Components/Info/Info';
+import Raport from './Components/Raport/Raport';
 import './App.css';
+
 function App() {
   return (
-    <Container fluid> 
-        
-        <Nav/>
-
-       <Search></Search>
+    <div> 
+        <Main></Main>
+        <Info></Info>
+        <Raport></Raport>
      
-      <Footer/>
 
-   </Container>
+
+   </div>
   );
 }
 
