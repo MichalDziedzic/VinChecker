@@ -2,10 +2,12 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {Container} from 'react-bootstrap';
-function Info() {
+const Info=(props)=>{
     return (
         <Container fluid>
-            <p>ffgdgfdgdgdfgdfgd</p>
+            <ul>
+                {props.map((list)=>{<li>list</li>})}
+            </ul>
         </Container>
     )
 }

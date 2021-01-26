@@ -5,6 +5,8 @@ import Search from '../Search';
 import Footer from '../Footer';
 import {Container} from 'react-bootstrap';
  const Main = () => {
+
+    
     return (
         
         <Container fluid> 

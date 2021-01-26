@@ -5,43 +5,50 @@ import '../style/Search.css';
 import Bg from '../IMG/cars_bg.jpg';
 
 
-const ApiCall=(vin)=>{
+   
 
 
-
-const options = {
-  method: 'GET',
-  url: 'https://vindecoder.p.rapidapi.com/v1.1/decode_vin',
-  params: {vin: vin},
-  headers: {
-    'x-rapidapi-key': '73eef2aeabmshb84af892f67bdfap11525djsnbe0ddb61ed1f',
-    'x-rapidapi-host': 'vindecoder.p.rapidapi.com'
-  }
-};
-
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
-}
  const Search = () => {
-    
+    const [vin,setVin]=useState("");
+      const [currentRapport,setCurrentRapport]=useState({});
 
+   const ApiCall=(vin)=>
+   {
 
-      const [vin,setVin]=useState("");
+         const options = {
+         method: 'GET',
+         url: 'https://vindecoder.p.rapidapi.com/v1.1/decode_vin',
+         params: {vin: vin},
+         headers: {
+            'x-rapidapi-key': '73eef2aeabmshb84af892f67bdfap11525djsnbe0ddb61ed1f',
+            'x-rapidapi-host': 'vindecoder.p.rapidapi.com'
+         }
+         };
+
+         axios.request(options).then(function (response) {
+            console.log(response.data);
+            setCurrentRapport(response.data);
+            
+         }).catch(function (error) {
+            console.error(error);
+         });
+
+         
+   }
+
+      
 
       const submitFn = (e)=>
       {
          e.preventDefault();
          console.log(e.target[0].value);
          
-         if(vin.length < 7 )
-         {}
-            console.log('your vin must have 8 characters');
+         if(vin.length !== 17 )
+            console.log('your vin must have 17 characters');
               
          ApiCall(vin);   
          setVin("");
+         
          
       }
       const handleChangeVin = (e)=>
