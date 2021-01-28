@@ -4,9 +4,9 @@ import Nav from '../Nav';
 import Search from '../Search';
 import Footer from '../Footer';
 import {Container} from 'react-bootstrap';
- const Main = () => {
+ const Main = (props) => {
 
-    
+    console.log();
     return (
         
         <Container fluid> 
@@ -14,7 +14,7 @@ import {Container} from 'react-bootstrap';
         
         <Nav/>
 
-       <Search/>
+       <Search apicall={props.ApiFn}/>
      
       <Footer/>
 

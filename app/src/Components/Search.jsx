@@ -1,40 +1,14 @@
 import React ,{useState} from 'react';
- import axios from "axios";
+ //import axios from "axios";
 import {Row ,Col} from 'react-bootstrap';
 import '../style/Search.css';
 import Bg from '../IMG/cars_bg.jpg';
 
-
-   
-
-
- const Search = () => {
+ const Search = ({apicall}) => {
     const [vin,setVin]=useState("");
-      const [currentRapport,setCurrentRapport]=useState({});
-
-   const ApiCall=(vin)=>
-   {
-
-         const options = {
-         method: 'GET',
-         url: 'https://vindecoder.p.rapidapi.com/v1.1/decode_vin',
-         params: {vin: vin},
-         headers: {
-            'x-rapidapi-key': '73eef2aeabmshb84af892f67bdfap11525djsnbe0ddb61ed1f',
-            'x-rapidapi-host': 'vindecoder.p.rapidapi.com'
-         }
-         };
-
-         axios.request(options).then(function (response) {
-            console.log(response.data);
-            setCurrentRapport(response.data);
-            
-         }).catch(function (error) {
-            console.error(error);
-         });
-
-         
-   }
+      //const [currentRapport,setCurrentRapport]=useState({});
+//2C4RDGBG4HR838841
+   
 
       
 
@@ -46,7 +20,7 @@ import Bg from '../IMG/cars_bg.jpg';
          if(vin.length !== 17 )
             console.log('your vin must have 17 characters');
               
-         ApiCall(vin);   
+         apicall(vin);   
          setVin("");
          
          

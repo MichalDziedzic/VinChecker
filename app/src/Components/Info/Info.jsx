@@ -6,7 +6,8 @@ const Info=(props)=>{
     return (
         <Container fluid>
             <ul>
-                {props.map((list)=>{<li>list</li>})}
+                {//props.map((list)=>{<li>list</li>})
+                }
             </ul>
         </Container>
     )
